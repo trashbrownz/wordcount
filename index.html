@@ -14,6 +14,9 @@
     --pink: #ff9ed8;
     --lilac: #cdb8ff;
     --sky: #a8dcff;
+    --mg1: 227, 154, 110;
+	--mg2: 223, 192, 189;
+	--mg3: 200, 163, 99;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; min-height: 100%; }
@@ -23,23 +26,19 @@
     align-items: center;
     justify-content: center;
     padding: 24px 16px;
-    font-family: Quicksand, "Varela Round", "Trebuchet MS", sans-serif;
+    font-family: Uncut Sans Variable, sans-serif;
     color: var(--ink);
-    background:
-      radial-gradient(60vmax 60vmax at 0% 0%, var(--sky), transparent 60%),
-      radial-gradient(60vmax 60vmax at 100% 100%, var(--pink), transparent 60%),
-      radial-gradient(50vmax 50vmax at 100% 0%, var(--lilac), transparent 60%),
-      #f6eeff;
-    background-attachment: fixed;
+    background-image: linear-gradient(44deg, rgba(var(--mg1),1), rgba(var(--mg2),1), rgba(var(--mg3),1));
+    background-color:#ggg;
+        background-attachment: fixed;
   }
   .glass {
     width: 100%;
     max-width: 460px;
     padding: 20px;
     border-radius: 40px;
-    background: rgba(255,255,255,.45);
-    border: 1.5px solid rgba(255,255,255,.9);
-    box-shadow: 0 20px 50px rgba(120,80,180,.18), inset 0 1px 0 #fff;
+    background: rgba(255,255,255,.15);
+    border: 1.5px solid rgba(255,255,255,.3);
     -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
   }
@@ -49,13 +48,16 @@
     height: 180px;
     resize: none;
     padding: 16px 18px;
-    font: 500 1rem/1.55 Quicksand, "Trebuchet MS", sans-serif;
-    color: var(--ink);
+    font-family: Uncut Sans Variable, sans-serif;
+    font-size: 14px; letter-spacing:0.5px;
+    font-weight:300; 
+    color:rgba(var(--mg1),1);
     background: rgba(255,255,255,.7);
     border: 1.5px solid transparent;
     border-radius: 26px;
+    text-align: justify; line-height:20px;
   }
-  textarea::placeholder { color: var(--soft); opacity: .8; }
+  textarea::placeholder { color:rgba(var(--mg3),0.5); opacity: .8; font-family:Google Sans Code; }
   textarea:focus-visible {
     outline: none;
     border-color: var(--pink);
@@ -74,7 +76,7 @@
     font-size: clamp(3.4rem, 16vw, 4.6rem);
     font-weight: 700;
     line-height: 1;
-    background: linear-gradient(120deg, var(--sky), var(--lilac) 45%, var(--pink));
+    background: rgba(var(--mg2),1);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -84,9 +86,9 @@
     display: block;
     margin-top: 6px;
     font-size: .95rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: .08em;
-    color: var(--soft);
+    color:rgba(var(--mg1),0.5);
   }
 </style>
 </head>
